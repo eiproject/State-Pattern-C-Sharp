@@ -9,9 +9,11 @@ namespace StatePattern.Business {
     internal SleepState(Laptop laptop) {
       _laptop = laptop;
     }
+    string IState.Name { get { return "SLEEP"; } }
 
     void IState.PressSleepBtn() {
       Console.WriteLine("Already sleep, now waking up!");
+      _laptop.SetState(_laptop.GetOnState());
     }
 
     void IState.PressHibernateBtn() {
@@ -20,6 +22,7 @@ namespace StatePattern.Business {
 
     void IState.PressPoweBtn() {
       Console.WriteLine("Waking up!");
+      _laptop.SetState(_laptop.GetOnState());
     }
   }
 }

@@ -9,6 +9,7 @@ namespace StatePattern.Business {
     internal OffState(Laptop laptop) {
       _laptop = laptop;
     }
+    string IState.Name { get { return "OFF"; } }
 
     void IState.PressSleepBtn() {
       Console.WriteLine("laptop off!");
@@ -19,7 +20,8 @@ namespace StatePattern.Business {
     }
 
     void IState.PressPoweBtn() {
-      Console.WriteLine("Turning on!");
+      Console.WriteLine("Now, Turning on!");
+      _laptop.SetState(_laptop.GetOnState());
     }
   }
 }

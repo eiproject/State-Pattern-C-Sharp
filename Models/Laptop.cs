@@ -20,10 +20,27 @@ namespace StatePattern.Models {
       _on = new OnState(this);
       _sleep = new SleepState(this);
       _hibernate = new HibernateState(this);
-    }
 
+      InitState(_off);
+    }
+    void InitState(IState init) {
+      _state = init;
+      Console.WriteLine($"Initializing Laptop { _type } in { _state.Name } condition");
+    }
+    public void PressPoweBtn() {
+      _state.PressPoweBtn();
+    }
+    internal void PressSleepBtn() {
+      _state.PressSleepBtn();
+    }
+    internal void PressHibernateBtn() {
+      _state.PressHibernateBtn();
+    }
     internal void SetState(IState state) {
       _state = state;
+    }
+    internal void CheckState() {
+      Console.WriteLine(_state);
     }
     internal IState GetOffState() {
       return _off;

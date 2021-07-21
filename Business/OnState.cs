@@ -9,17 +9,21 @@ namespace StatePattern.Business {
     internal OnState(Laptop laptop) {
       _laptop = laptop;
     }
+    string IState.Name { get { return "ON"; } }
 
     void IState.PressSleepBtn() {
       Console.WriteLine("Going to sleep. Please wait...");
+      _laptop.SetState(_laptop.GetSleepState());
     }
 
     void IState.PressHibernateBtn() {
       Console.WriteLine("Going to hibernate. Please wait...");
+      _laptop.SetState(_laptop.GetHibernateState());
     }
 
     void IState.PressPoweBtn() {
-      Console.WriteLine("Turning off!");
+      Console.WriteLine("Turning off! See you...");
+      _laptop.SetState(_laptop.GetOffState());
     }
   }
 }
