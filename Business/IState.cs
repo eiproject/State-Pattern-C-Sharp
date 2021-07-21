@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StatePattern {
-  interface ILaptopState {
+namespace StatePattern.Business {
+  interface IState {
     void battery();
     void keyboard();
     void display();
