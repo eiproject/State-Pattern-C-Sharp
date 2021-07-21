@@ -4,11 +4,8 @@ using System.Text;
 
 namespace StatePattern.Business {
   interface IState {
-    void battery();
-    void keyboard();
-    void display();
-    void touchpad();
-    void hardisk();
-    void memory();
+    void PressPoweBtn();
+    void PressSleepBtn();
+    void PressHibernateBtn();
   }
 }

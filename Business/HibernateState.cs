@@ -9,28 +9,17 @@ namespace StatePattern.Business {
     internal HibernateState(Laptop laptop) {
       _laptop = laptop;
     }
-    void IState.battery() {
-      Console.WriteLine("Lesser power consumption");
+
+    void IState.PressSleepBtn() {
+      Console.WriteLine("Can't move from hibernate to sleep, laptop wake up!");
     }
 
-    void IState.display() {
-      Console.WriteLine("Display off");
+    void IState.PressHibernateBtn() {
+      Console.WriteLine("Already in hibernate state");
     }
 
-    void IState.hardisk() {
-      Console.WriteLine("Hardisk off");
-    }
-
-    void IState.keyboard() {
-      Console.WriteLine("Keyboard standby");
-    }
-
-    void IState.memory() {
-      Console.WriteLine("Memory on");
-    }
-
-    void IState.touchpad() {
-      Console.WriteLine("Touchpad off");
+    void IState.PressPoweBtn() {
+      Console.WriteLine("Laptop wake up from hibernate!");
     }
   }
 }

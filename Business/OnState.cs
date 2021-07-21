@@ -9,28 +9,17 @@ namespace StatePattern.Business {
     internal OnState(Laptop laptop) {
       _laptop = laptop;
     }
-    void IState.battery() {
-      Console.WriteLine("Normal power consumption");
+
+    void IState.PressSleepBtn() {
+      Console.WriteLine("Going to sleep. Please wait...");
     }
 
-    void IState.display() {
-      Console.WriteLine("Display on");
+    void IState.PressHibernateBtn() {
+      Console.WriteLine("Going to hibernate. Please wait...");
     }
 
-    void IState.hardisk() {
-      Console.WriteLine("Hardisk on");
-    }
-
-    void IState.keyboard() {
-      Console.WriteLine("Keyboard on");
-    }
-
-    void IState.memory() {
-      Console.WriteLine("Memory on");
-    }
-
-    void IState.touchpad() {
-      Console.WriteLine("Touchpad on");
+    void IState.PressPoweBtn() {
+      Console.WriteLine("Turning off!");
     }
   }
 }
