@@ -21,7 +21,7 @@ namespace StatePattern.Business {
       _laptop.SetState(_laptop.GetHibernateState());
     }
 
-    void IState.PressPoweBtn() {
+    void IState.PressPowerBtn() {
       Console.WriteLine("Turning off! See you...");
       _laptop.SetState(_laptop.GetOffState());
     }

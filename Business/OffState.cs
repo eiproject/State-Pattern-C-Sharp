@@ -19,7 +19,7 @@ namespace StatePattern.Business {
       Console.WriteLine("Laptop off!");
     }
 
-    void IState.PressPoweBtn() {
+    void IState.PressPowerBtn() {
       Console.WriteLine("Now, Turning on!");
       _laptop.SetState(_laptop.GetOnState());
     }

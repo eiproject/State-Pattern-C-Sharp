@@ -27,8 +27,8 @@ namespace StatePattern.Models {
       _state = init;
       Console.WriteLine($"Initializing Laptop { _type } in { _state.Name } condition");
     }
-    public void PressPoweBtn() {
-      _state.PressPoweBtn();
+    public void PressPowerBtn() {
+      _state.PressPowerBtn();
     }
     internal void PressSleepBtn() {
       _state.PressSleepBtn();

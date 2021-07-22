@@ -20,7 +20,7 @@ namespace StatePattern.Business {
       Console.WriteLine("Can't move from sleep to hibernate");
     }
 
-    void IState.PressPoweBtn() {
+    void IState.PressPowerBtn() {
       Console.WriteLine("Waking up!");
       _laptop.SetState(_laptop.GetOnState());
     }

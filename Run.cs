@@ -12,12 +12,12 @@ namespace StatePattern {
     }
 
     internal void Start() {
-      _myLaptop.PressPoweBtn();
+      _myLaptop.PressPowerBtn();
       _myLaptop.PressSleepBtn();
-      _myLaptop.PressPoweBtn();
+      _myLaptop.PressPowerBtn();
       _myLaptop.PressHibernateBtn();
-      _myLaptop.PressPoweBtn();
-      _myLaptop.PressPoweBtn();
+      _myLaptop.PressPowerBtn();
+      _myLaptop.PressPowerBtn();
 
     }
   }

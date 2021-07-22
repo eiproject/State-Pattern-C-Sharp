@@ -20,7 +20,7 @@ namespace StatePattern.Business {
       _laptop.SetState(_laptop.GetOnState());
     }
 
-    void IState.PressPoweBtn() {
+    void IState.PressPowerBtn() {
       Console.WriteLine("Laptop waking up from hibernate!");
       _laptop.SetState(_laptop.GetOnState());
     }
